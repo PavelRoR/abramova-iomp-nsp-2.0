@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Lora';
+    src: url('fonts/Lora.eot');
+    src: url('fonts/Lora.eot') format('embedded-opentype'),
+         url('fonts/Lora.woff2') format('woff2'),
+         url('fonts/Lora.woff') format('woff'),
+         url('fonts/Lora.ttf') format('truetype'),
+         url('fonts/Lora.svg#Lora') format('svg');
+}

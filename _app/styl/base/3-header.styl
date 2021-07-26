@@ -1,0 +1,115 @@
+header
+	overflow hidden
+	padding 20px 0
+	margin-bottom: 60px
+.header-logo
+	float left
+.header-menu
+	float: right
+	li
+		list-style none
+		display inline-block
+		margin-right: 50px
+		a
+			font-size: 14px
+			color: #000
+			transition: all .3s ease
+			padding 20px 0
+			&:focus
+				color: #000
+			&:hover
+				color #3A38DC
+		&:first-child
+			border: 1px solid #3A38DC
+			border-radius: 2px
+			a
+				padding 20px 35px
+				background-color #fff
+				color #3A38DC
+				display block
+				width 100%
+				height 100%
+			&:hover
+				a
+					background-color: #3A38DC
+					color: #fff
+		&:last-child
+			margin-right: 0
+.header-logo-mobile
+	display: none;
+.mobile-menu
+	display: none;
+	position: absolute;
+	width: 30px;
+	height: 25px;
+	padding: 5px;
+	top 30px
+	right: 40px;
+	cursor: pointer;
+	z-index: 200;
+	&-line
+		width: 100%;
+		height: 3px;
+		background-color: #404040
+		position: absolute;
+		transition: all .4s ease
+		&-1
+			top 0
+			&.switched
+				transform: rotate(45deg)
+				top 13px
+				right: 0;
+				left: 0;
+				width: 42px;
+		&-2
+			height: 2px;
+			top calc(50% - 1px)
+			&.switched
+				opacity: 0;
+		&-3
+			bottom: 0
+			&.switched
+				transform: rotate(-45deg)
+				top 13px
+				left: 0;
+				right: 0;
+				width: 42px;
+.nav-active
+	left: 0 !important;
+@media screen and (max-width: 1199px)
+	.header-menu li
+		margin-right: 20px
+@media screen and (max-width: 991px)
+	.header-nav
+		position: fixed;
+		width: 300px;
+		height: 100%;
+		background-color: #fff;
+		padding: 20px;
+		z-index: 190;
+		top 0
+		left: -100%
+		transition: all .3s ease
+	.header-logo-mobile
+		display: block;
+		margin-bottom: 30px
+	.mobile-menu
+		display: block;
+	.header-menu li
+		margin-bottom: 20px;
+@media screen and (max-width 767px)
+	header
+		margin-bottom: 30px
+	.header-logo
+		float: none
+		display: inline-block;
+@media screen and (max-width 560px)
+	header
+		margin-bottom: 10px
+	.header-logo
+		height: 40px
+	.mobile-menu
+		top 20px
+@media screen and (max-width 385px)
+	.header-nav
+		width: 100%;
