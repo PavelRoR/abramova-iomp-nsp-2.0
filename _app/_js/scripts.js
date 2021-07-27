@@ -1,14 +1,24 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $(function () {
         var check = $('.check', this),
-            email = $('.input-mail', this),
-            message = $('.alert-message', this);
+            email = $('.input-mail'),
+            emCorr = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/,
+            message = $('.alert-message', this),
+            button = $('.button-form');
+        if (emCorr.test(email.val())) {
+            button.css('backgroundColor', '#48817B')
+        }
+        email.keyup(function () {
+            if (emCorr.test($(this).val())) {
+                button.css('backgroundColor', '#48817B')
+            }
+        })
         $(".form").on("submit", function () {
             var check = $('.check', this),
                 message = $('.alert-message', this),
                 reNone = /.+/,
-                email = $('.input-mail', this),
-                button = $('.button-form', this);
+                email = $('.input-mail', this);
+
             if (!email.val().match(reNone)) {
                 message.text('Введите email').slideDown(500);
                 return false;
@@ -35,11 +45,11 @@ $(document).ready(function() {
         });
         check.click(function () {
             check.next().css({
-                "color": "#000",
+                "color": "#9C9C9C",
                 'transition': 'all .4s ease'
             });
             check.next().children().css({
-                "color": "#000",
+                "color": "#9C9C9C",
                 'transition': 'all .4s ease'
             });
             message.slideUp(500);
@@ -48,68 +58,64 @@ $(document).ready(function() {
 
     $('.button-up').fancybox();
     $('[data-fancybox]').fancybox({
-        loop: 1,
+        loop: 0,
     });
     $('.revs-slider').slick({
         autoplay: false,
         autoplaySpeed: 3000,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         infinite: false,
         dots: false,
         speed: 300,
         arrows: true,
-        centerPadding: '40px',
+        // centerPadding: '40px',
         // adaptiveHeight: true,
-        centerMode: true,
+        // centerMode: true,
         appendArrows: '.video-revs-arrows-1',
-        responsive: [
-        {
+        responsive: [{
             breakpoint: 768,
             settings: {
                 slidesToShow: 1
             }
-        }
-        ]
+        }]
     });
     $('.revs-slider-text').slick({
         autoplay: false,
         autoplaySpeed: 3000,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         infinite: false,
         dots: false,
         speed: 300,
         arrows: true,
-        centerPadding: '40px',
+        // centerPadding: '40px',
         // adaptiveHeight: true,
-        centerMode: true,
+        // centerMode: true,
         appendArrows: '.video-revs-arrows-2',
-        responsive: [
-        {
+        responsive: [{
             breakpoint: 561,
             settings: {
                 slidesToShow: 1
             }
-        }
-        ]
+        }]
     });
     /* Видео */
     $(".video-wrapper-revs").click(function () {
-       
-       
-        $(".video-wrapper-revs iframe").each(function(){
+
+
+        $(".video-wrapper-revs iframe").each(function () {
             var l = $(this).parent().attr('data-img');
             $(this).parent().html('<img src="' + l + '" alt="Видео отзыв">');
-         })
-         var a = $(this).attr("data-youtube");
-     
-     
-             $(this).html('<iframe src="https://www.youtube.com/embed/' + a + '?showinfo=0&rel=0&autoplay=1&mute=1&modestbranding=1"  allowfullscreen></iframe>')
- 
- });
+        })
+        var a = $(this).attr("data-youtube");
 
-    function imToVideo(){
+
+        $(this).html('<iframe src="https://www.youtube.com/embed/' + a + '?showinfo=0&rel=0&autoplay=1&mute=1&modestbranding=1"  allowfullscreen></iframe>')
+
+    });
+
+    function imToVideo() {
         $('.video-wrapper-revs iframe').each(function () {
             var l = $(this).parent().attr('data-img');
             $(this).parent().html('<img src="' + l + '" alt="Видео отзыв">');
@@ -119,14 +125,14 @@ $(document).ready(function() {
             $(this).parent().html('<iframe src="https://www.youtube.com/embed/' + a + '?modestbrandig=1&mute=1&showinfo=0&rel=0&autoplay=1" allowfullscreen></iframe>');
         });
     }
-$('.revs-slider').on('swipe', function (event, slick, direction) {
-    imToVideo();
-});
-$('.revs-slider').on('afterChange', function (event, slick, direction) {
-    imToVideo();
-});
-$('.revs-slider').on('beforeChange', function (event, slick, direction) {
-    imToVideo();
-});
-/*Конец документа*/
+    $('.revs-slider').on('swipe', function (event, slick, direction) {
+        imToVideo();
+    });
+    $('.revs-slider').on('afterChange', function (event, slick, direction) {
+        imToVideo();
+    });
+    $('.revs-slider').on('beforeChange', function (event, slick, direction) {
+        imToVideo();
+    });
+    /*Конец документа*/
 });

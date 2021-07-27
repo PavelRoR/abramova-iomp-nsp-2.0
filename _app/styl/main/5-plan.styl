@@ -1,4 +1,35 @@
+#plan
+	padding 70px 0 310px
 .tab-content > .tab-pane
 	display: none;
 .tab-content > .active
 	display: block;
+.days-buttons
+	li
+		list-style: none
+		display inline-block
+		margin-bottom: 55px
+		a
+			display block
+			width 100%
+			height 100%
+			font-family: L
+			font-size: 48px
+			font-weight: normal
+			line-height: 120%
+			transition: all .3s ease
+		&:nth-child(2)
+			margin 0 75px 55px
+		&:hover a
+		&.active a
+			text-decoration underline
+			color #000
+.button-day
+	margin-top: 40px
+.days-img
+	position absolute
+	top 450px
+	right 30px
+	display block
+	width 100%
+	max-width 503px
