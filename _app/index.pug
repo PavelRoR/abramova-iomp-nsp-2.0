@@ -9,24 +9,27 @@
 -var fav_png = path+'favicon.png';
 -var jsLib = path+'js/libs.min.js';
 -var scripts = path+'js/scripts.js';
--var noref = true
+-var noref = true;
 -var action = '';
 -var group = '';
 -var formId = '';
 -var formVc = '';
 //- -var footer_title = true
 //- -var oferta = 'https://mastervision.su/oferta.docx'
--var io = true
--var ah = true
+-var io = true;
+-var ah = true;
+-var href = '#Modal';
 
 mixin b(cl, href, p, target, id)
 	a.button(class=cl href!=href target=target id=id)=p
-mixin gt(cl, small, h3)
-	h3.general-title(class=cl)
-		small=small
-		|=h3
+mixin gt(cl, h3)
+	h3.general-title(class=cl)=h3
 mixin imgs(cl, src ,alt)
 	img(class=cl src=path+src alt=alt)
+mixin ai(n,p)
+	.general-list-ol(class='general-list-ol'+n)
+		h4.general-list-ol-title=n
+		p.general-list-ol-text=p
 
 doctype html
 html(lang="ru")
@@ -36,16 +39,17 @@ html(lang="ru")
 	body
 		include pug/scripts/body_top_scripts
 		include pug/base/1-header
-		include pug/main/1-main
-		include pug/main/2-video
-		include pug/main/3-advantages
-		include pug/main/4-for
-		include pug/main/5-plan
-		include pug/main/6-usefull
-		include pug/main/7-modules
-		include pug/main/8-author
-		include pug/main/9-revs
-		include pug/main/10-last
+		.wrapper
+			include pug/main/1-main
+			include pug/main/2-video
+			include pug/main/3-advantages
+			include pug/main/4-for
+			include pug/main/5-plan
+			include pug/main/6-usefull
+			include pug/main/7-modules
+			include pug/main/8-author
+			include pug/main/9-revs
+			include pug/main/10-last
 		include pug/main/11-modal
 		include pug/base/2-footer
 		include pug/base/3-scripts

@@ -1,0 +1,58 @@
+section#plan
+	.container
+		h3.pre-title Программа презентации
+		.days
+			ul.nav.nav-tabs.days-buttons#days(role="tablist")
+				li(role="presentation").active
+					a(href="#day-1" aria-controls="day-1" role="tab" data-toggle="tab") 1 день
+				li(role="presentation")
+					a(href="#day-2" aria-controls="day-2" role="tab" data-toggle="tab") 2 день
+				li(role="presentation")
+					a(href="#day-3" aria-controls="day-3" role="tab" data-toggle="tab") 3 день
+			.tab-content.days-container
+				.tab-pane.fade.in.day-body.active(role="tabpanel")#day-1
+					.row
+						.col-md-6
+							ul.general-list-ul
+								li Классическая психология, Психотерапия, Новая системная психология – разбор основных видов терапии и их принципиальное отличие друг от друга
+						.col-md-6
+							ul.general-list-ul
+								li Тема денег, отношений, предназначения – как работать с данными темами максимально эффективным образом. Система отправной точки – ищем ключевую отправную точку возникновения любой проблемы
+					.row
+						.col-md-6
+							ul.general-list-ul
+								li Техника регрессивного гипноза – опасность и эффективность данного метода. 10 основных принципов работы метода регрессии
+						.col-md-6
+							ul.general-list-ul
+								li НЛП-терапия  – как при помощи методики диссоциированных состояний можно вылечить любого рода зависимость
+					+b('button-up button-day', href, 'Записаться на презентацию')
+				.tab-pane.fade.day-body(role="tabpanel")#day-2
+					.row
+						.col-md-6
+							ul.general-list-ul
+								li Психо-эмоциональный эквивалент заболевания. Причинно - следственные связи формирующие заболевания. Болезнь, как биологически целесообразная программа, заложенная на глубинных уровнях подсознания
+						.col-md-6
+							ul.general-list-ul
+								li Какими методиками эффективно исцелять заболевания. Техники по работе с заболеваниями
+					.row
+						.col-md-6
+							ul.general-list-ul
+								li Системно-родовая терапия. Как при помощи бессознательного решить любой запрос клиента в максимально кратчайшие сроки
+						.col-md-6
+							ul.general-list-ul
+								li Секреты привлечения клиентов от успешного, высокооплачиваемого психолога Жанны Абрамовой
+					+b('button-up button-day', href, 'Записаться на презентацию')
+				.tab-pane.fade.day-body(role="tabpanel")#day-3
+					.row
+						.col-md-6
+							ul.general-list-ul
+								li Демо сессии по разбору клиентских запросов
+						.col-md-6
+							ul.general-list-ul
+								li Каждый может прийти с абсолютно любым запросом в различных сферах, где у него сформировались проблемы
+					.row
+						.col-md-6
+							ul.general-list-ul
+								li Жанна Абрамова покажет наглядно, как работает новая системная психология. Оставьте заявку на разбор вашей ситуации и получите возможность в прямом эфире найти ответы на давно интересующие ваши вопросы
+					+b('button-up button-day', href, 'Записаться на презентацию')
+			+imgs('days-img', 'img/images/days.png', 'Цветок')
