@@ -1,0 +1,34 @@
+-var path = '../';
+-var head_url = 'https://abramova.iomp.ru/nsp-2.0/promo/';
+-var head_title = 'Подпишись в Telegram';
+//-var head_description = '';
+//-var head_img = 'img/banner.jpg';
+-var styles = path+'css/promo.min.css';
+-var fav_ap = path+'favicon.svg';
+-var fav_ico = path+'favicon.ico';
+-var fav_png = path+'favicon.png';
+-var scripts = path+'js/confirm.js';
+-var noref = true;
+-var video = 'twbyyyJA_e8';
+-var bot = '#!';
+-var io = true;
+-var ah = true;
+
+doctype html
+html(lang="ru")
+	head
+		include pug/head
+		include pug/scripts/head_scripts
+	body
+		include pug/scripts/body_top_scripts
+		.wrapper
+			section#main
+				include pug/base/1-header
+				.container
+					.circle.circle-bordered.circle-main-1
+					.circle.circle-pink.circle-main-2
+					.content
+						include pug/promo/1-main
+		include pug/base/2-footer
+		include pug/base/3-scripts
+		include pug/scripts/body_bottom_scripts

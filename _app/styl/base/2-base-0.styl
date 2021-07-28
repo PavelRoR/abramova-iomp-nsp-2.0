@@ -16,12 +16,14 @@ body
 	position relative
 	@media screen and (min-width 2295px)
 		max-width 1400px
-	// @media screen and (min-width 1200px)
-	// 	width: 1170px;
-	// @media screen and (min-width 992px)
-	// 	width: 970px;
-	// @media screen and (min-width 768px)
-	// 	width: 750px;
+	@media screen and (max-width 1230px)
+		width: 1170px
+	@media screen and (max-width 1199px)
+		width: 970px;
+	@media screen and (max-width 991px)
+		width: 750px;
+	@media screen and (max-width 767px)
+		width auto
 .content
 	position relative
 	z-index 50
@@ -99,66 +101,3 @@ footer
 		background-color: #2B514D
 		text-decoration none
 		color #FEE7E6
-.general-title
-	font-family: L
-	font-size: 38px
-	font-weight: normal
-	margin-bottom: 70px
-	&-pink
-		color: #FEE7E6;
-.pre-title
-	font-size: 24px
-	font-weight: 300
-	margin-bottom: 30px
-	color: #ADADAD;
-.general-text
-	margin-bottom: 30px
-	@media screen and (max-width 992px)
-		margin-bottom: 20px
-	@media screen and (max-width 560px)
-		margin-bottom: 10px
-.general-list-ul
-	li
-		list-style: none
-		position relative
-		padding-left: 38px
-		margin-bottom: 60px
-		&:before
-			content: ''
-			display block
-			position absolute
-			width 18px
-			height: 18px
-			border-radius: 50px
-			background-color #48817B
-			top 5px
-			left 0
-	&-pink
-		li
-			color: #FEE7E6
-			padding-left: 28px
-			margin-bottom: 30px
-			&:before
-				width 13px
-				height: 13px
-				top 7px
-				background-color: #FEE7E6
-.general-list-ol
-	position relative
-	color: #FEE7E6
-	margin-bottom: 70px
-	width 100%
-	&-title
-		display block
-		font-family: L
-		font-size: 38px
-		font-weight: normal
-		line-height: 45px
-		position absolute
-		top 0
-		left 0
-	&-text
-		font-family: SUD
-		font-size: 19px
-		line-height: 27px
-		padding-left: 40px

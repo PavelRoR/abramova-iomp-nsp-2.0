@@ -1,0 +1,19 @@
+.row
+	.col-md-6
+		.video-wrapper.video-wrapper-main
+			iframe(src!="https://www.youtube.com/embed/"+video+"?autoplay=1&mute=1&modestbranding=1" allowfullscreen)
+	.col-md-6
+		h1.main-title Благодарим Вас за регистрацию на нашу презентацию
+		p.main-text У нас к Вам просьба, прямо сейчас 
+			span подпишитесь на наш телеграм
+			|. Для Вас мы будем каждый день отправлять техники для проработки различных проблематик.
+			br
+			| Более того Вы сможете задать любой интересующий вас вопрос специалисту компании
+		p.main-text 
+			span Перейдите в Нашего чат-бота
+		a.button.button-main(href=bot) Подписаться 
+			img(src=path+"img/icons/tg.png" alt="Telegram")
+p.main-text Обратите внимание, если вы не увидели во входящих сообщениях письмо благодарность, то обязательно проверьте вкладку 
+	span.spam спам
+	|, либо 
+	span.spam промоакции
