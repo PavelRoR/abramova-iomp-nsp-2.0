@@ -1,16 +1,17 @@
 $(document).ready(function () {
     $(function () {
         var check = $('.check', this),
-            email = $('.input-mail'),
-            emCorr = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/,
+            email = $('.input-mail', this),
+            emCorr = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,10}$/,
             message = $('.alert-message', this),
-            button = $('.button-form');
-        if (emCorr.test(email.val())) {
-            button.css('backgroundColor', '#48817B')
-        }
+            button = $('.button-form', this);
         email.keyup(function () {
             if (emCorr.test($(this).val())) {
-                button.css('backgroundColor', '#48817B')
+                $(this).parent().parent('.form').children('.button').css('backgroundColor', '#48817B');
+            }
+            if (!$(this).val() || !emCorr.test($(this).val())) {
+                $(this).parent().parent('.form').children('.button').css('backgroundColor', '#C7C7C7')
+                // button.css('backgroundColor', '#C7C7C7')
             }
         })
         $(".form").on("submit", function () {
@@ -117,6 +118,7 @@ $(document).ready(function () {
         var a = $(this).attr("data-youtube");
         $(this).html('<iframe src="https://www.youtube.com/embed/' + a + '?showinfo=0&rel=0&autoplay=1&mute=1&modestbranding=1"  allowfullscreen></iframe>')
     });
+
     function imToVideo() {
         $('.video-wrapper-revs iframe').each(function () {
             var l = $(this).parent().attr('data-img');
@@ -137,27 +139,26 @@ $(document).ready(function () {
         imToVideo();
     });
 
-    $('.mobile-menu').on('click',function () {
-        if(!$('.header-nav').hasClass('nav-active')){
-            $(this).css('position','fixed');
+    $('.mobile-menu').on('click', function () {
+        if (!$('.header-nav').hasClass('nav-active')) {
+            $(this).css('position', 'fixed');
             $('.header-nav').addClass('nav-active');
             $('.mobile-menu-line-1,.mobile-menu-line-2,.mobile-menu-line-3').addClass('switched')
-        }
-        else {
-            $(this).css('position','absolute');
+        } else {
+            $(this).css('position', 'absolute');
             $('.header-nav').removeClass('nav-active')
             $('.mobile-menu-line-1,.mobile-menu-line-2,.mobile-menu-line-3').removeClass('switched')
         }
     })
-        /* Якорь */
-        $("a.button-mobile").click(function (f) {
-            f.preventDefault();
-            var a = $(this).attr("href"),
-                b = $(a).offset().top;
-            $("body,html").animate({
-                scrollTop: b
-            }, 500);
-    
-        });
+    /* Якорь */
+    $("a.button-mobile").click(function (f) {
+        f.preventDefault();
+        var a = $(this).attr("href"),
+            b = $(a).offset().top;
+        $("body,html").animate({
+            scrollTop: b
+        }, 500);
+
+    });
     /*Конец документа*/
 });
