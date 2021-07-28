@@ -15,9 +15,21 @@
 @import 'main/4-for'
 @import 'main/5-plan'
 @import 'main/6-usefull'
-@import 'main/7-modules'
+// @import 'main/7-modules'
 @import 'main/8-author'
 @import 'main/9-revs'
 @import 'main/10-last'
+.button-mobile
+	position fixed
+	z-index 80
+	bottom 20px
+	left 0
+	right 0
+	display none
+	width 96%
+	max-width 315px
+	margin 0 auto
+	@media screen and (max-width 560px)
+		display block
 @import 'base/4-footer'
 @import 'main/11-modal'

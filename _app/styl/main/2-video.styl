@@ -1,5 +1,9 @@
 #video
 	padding 150px 0
+	@media screen and (max-width 991px)
+		padding 90px 0
+	@media screen and (max-width 560px)
+		padding 60px 0 50px
 .circle
 	position absolute
 	border-radius: 50%
@@ -12,20 +16,45 @@
 		height: 304px;
 		top: 170px;
 		left: -66px;
+		@media screen and (max-width 991px)
+			top auto
+			bottom -181px
 	&-2
 		width: 129px;
 		height: 129px;
 		top: 400px;
 		left: 282px;
+		@media screen and (max-width 991px)
+			top auto
+			bottom -200px
+			left 380px
+		@media screen and (max-width 560px)
+			left 280px
 	&-3
 		width: 32px;
 		height: 32px;
 		top: 400px;
 		left: 195px;
+		@media screen and (max-width 991px)
+			top auto
+			bottom -100px
+			left: 215px
 	&-4
 		width: 42px;
 		height: 42px;
 		top: 450px;
 		left: 86px;
+		@media screen and (max-width 991px)
+			top auto
+			bottom -200px
 .button-video
 	margin-top: 20px
+	@media screen and (max-width 560px)
+		display none
+.video-wrapper-video
+	@media screen and (max-width 991px)
+		margin-bottom: 250px
+.general-title-video-desktop
+	display none
+.general-title-video-mobile
+	display block

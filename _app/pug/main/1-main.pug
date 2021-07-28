@@ -6,11 +6,12 @@ section#main
 				h1.main-title Станьте психологом. 
 					br
 					| Работайте с бессознательными программами личности!
+				+imgs('main-img', 'img/images/main.png', 'Картинка блока')
 				h2.main-subtitle Комплексная программа профессиональной переподготовки начинающих и практикующих психологов по специальности «Специалист системной психологии» с выдачей диплома государственного образца
 				.main-info
 					p.main-info-text Даты проведения презентации:
 						span с 17 по 19 августа, 19:00(мск)
-
+					#form-main
 					p.main-info-text Автор курса:
 						span Жанна Абрамова
 				form(action=action+group method="post" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" target=form_target).form.form-main
@@ -35,5 +36,5 @@ section#main
 						input(type="hidden" name="formVc" value=formVc)
 						input(type="hidden" name="_aid" value="")
 						input(type="hidden" name="_vcaid" value="")
-			.col-md-6
-				+imgs('main-img', 'img/images/main.png', 'Картинка блока')
+			//- .col-md-6
+			//- 	+imgs('main-img', 'img/images/main.png', 'Картинка блока')

@@ -1,17 +1,27 @@
 #main
 	padding 0
 .main
+	&-pre
+		@media screen and (max-width 560px)
+			font-size: 18px
 	&-title
 		font-family: L
 		font-size: 38px
 		font-weight: normal
 		line-height: 120%
 		margin 35px 0
+		@media screen and (max-width 560px)
+			font-size: 22px
+			margin 20px 0
 	&-subtitle
 		font-size: 19px
 		font-weight: 300
+		@media screen and (max-width 560px)
+			font-size: 17px
 	&-info
 		margin 45px 0 35px
+		@media screen and (max-width 560px)
+			margin 30px 0 20px
 		&-text
 			display inline-block
 			font-family: L
@@ -26,21 +36,61 @@
 				margin-left: 88px
 				span
 					color #5A9891
+			@media screen and (max-width 1199px)
+				display block
+				&:last-of-type
+					margin-left: 0
+					margin-top: 10px
+			@media screen and (max-width 560px)
+				font-size: 20px
+				&:last-of-type
+					margin 20px 0 30px
+	&-img
+		position absolute
+		top 0
+		right -600px
+		@media screen and (max-width 1199px)
+			right -500px
+		@media screen and (max-width 991px)
+			position: static
+			display block
+			width 100%
+			max-width 519px
+			margin-bottom: 35px
+		@media screen and (max-width 560px)
+			margin 0 auto 20px
 .input
 	display block
 	width 100%
-	max-width 317px
 	border: 1px solid #BCBCBC;
 	border-radius: 5px;
 	padding 16px 28px
 	color: #9C9C9C;
 	background-color #fff
 	&-mail
+		max-width 317px
 		float left
+		@media screen and (max-width 1230px)
+			max-width 280px
+		@media screen and (max-width 1199px)
+			display block
+			float none
+			margin 0 0 30px
+		@media screen and (max-width 560px)
+				margin 0 auto 10px
 .button-form
 	float right
 	background-color: #C7C7C7
 	color: #fff
+	@media screen and (max-width 1199px)
+		float: none
+		display block
+		width 100%
+		max-width 280px
+		margin 0
+	@media screen and (max-width 560px)
+		margin 0 auto
+		background-color: #48817B
 @-webkit-keyframes autofill
 	to
 		font-size: 19px
@@ -66,6 +116,10 @@ input:-webkit-autofill
 	text-align: left
 .checking-main
 	margin-left: 0
+	@media screen and (max-width 1199px)
+		max-width 280px
+	@media screen and (max-width 560px)
+		margin 10px auto 0
 .checking .check-label
 	line-height: 27px;
 	cursor: pointer;
@@ -76,6 +130,8 @@ input:-webkit-autofill
 	text-align: left;
 	font-size: 15px
 	color #9C9C9C
+	@media screen and (max-width 1199px)
+		line-height: 18px
 .checking .check-label a
 	text-decoration: none
 	border-bottom: 1px dashed transparent

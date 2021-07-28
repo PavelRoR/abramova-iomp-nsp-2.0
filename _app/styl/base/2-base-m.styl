@@ -3,13 +3,20 @@
 	font-size: 38px
 	font-weight: normal
 	margin-bottom: 70px
+	line-height: 120%
 	&-pink
 		color: #FEE7E6;
+	@media screen and (max-width 560px)
+		font-size: 22px
+		margin-bottom: 30px
 .pre-title
 	font-size: 24px
 	font-weight: 300
 	margin-bottom: 30px
 	color: #ADADAD;
+	@media screen and (max-width 560px)
+		font-size: 20px
+		margin-bottom: 20px
 .general-text
 	margin-bottom: 30px
 	@media screen and (max-width 992px)
@@ -32,6 +39,12 @@
 			background-color #48817B
 			top 5px
 			left 0
+		@media screen and (max-width 560px)
+			margin-bottom: 30px
+			padding-left: 27px
+			&:before
+				width 12px
+				height: 12px
 	&-pink
 		li
 			color: #FEE7E6
@@ -42,11 +55,19 @@
 				height: 13px
 				top 7px
 				background-color: #FEE7E6
+			@media screen and (max-width 560px)
+				padding-left: 27px
+				&:before
+					width 12px
+					height: 12px
+					top 5px
 .general-list-ol
 	position relative
 	color: #FEE7E6
 	margin-bottom: 70px
 	width 100%
+	@media screen and (max-width 560px)
+		margin-bottom: 30px
 	&-title
 		display block
 		font-family: L
@@ -56,8 +77,11 @@
 		position absolute
 		top 0
 		left 0
+		@media screen and (max-width 560px)
+			font-size: 30px
+			line-height: 36px
 	&-text
 		font-family: SUD
-		font-size: 19px
-		line-height: 27px
 		padding-left: 40px
+		@media screen and (max-width 560px)
+			padding-left: 28px
