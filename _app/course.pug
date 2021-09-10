@@ -1,24 +1,19 @@
--var path = '';
--var head_url = 'https://abramova.iomp.ru/nsp-2.0/';
+-var path = '../';
+-var head_url = 'https://abramova.iomp.ru/nsp-2.0/course/';
 -var head_title = '«Новая системная психология - 2.0»';
--var head_description = 'Станьте психологом. Работайте с бессознательными программами личности!';
--var head_img = 'img/banner.jpg';
--var styles = path+'css/styles.min.css';
+-var head_description = 'Обучающий курс Жанны Абрамовой';
+-var styles = path+'css/course.min.css';
 -var fav_ap = path+'favicon.svg';
 -var fav_ico = path+'favicon.ico';
 -var fav_png = path+'favicon.png';
--var jsLib = path+'js/libs.min.js';
--var scripts = path+'js/scripts.js';
+-var jsLib = path+'js/course-libs.min.js';
+-var scripts = path+'js/course.js';
 -var noref = true;
--var action = 'https://shop.iomp.ru/?r=personal/newsletter/sub/add&id=33401&lg=ru&Contact[id_newsletter]=';
--var group = '230';
--var formId = '100';
--var formVc = '3745842769';
 //- -var footer_title = true
 //- -var oferta = 'https://mastervision.su/oferta.docx'
 -var io = true;
 -var ah = true;
--var href = '#Modal';
+-var href = '#prices';
 -var politics = 'https://iomp.ru/privacy';
 
 mixin b(cl, href, p, target, id)
@@ -29,7 +24,13 @@ mixin imgs(cl, src ,alt)
 	img(class=cl src=path+src alt=alt)
 mixin ai(n,p)
 	.general-list-ol(class='general-list-ol-'+n)
-		h4.general-list-ol-title=n
+		h4.general-list-ol-title
+			span=n
+		p.general-list-ol-text=p
+mixin aib(cl, n,p)
+	.general-list-ol(class='general-list-'+n+' '+cl)
+		h4.general-list-ol-title
+			span=n
 		p.general-list-ol-text=p
 
 doctype html
@@ -41,18 +42,16 @@ html(lang="ru")
 		include pug/scripts/body_top_scripts
 		include pug/base/1-header
 		.wrapper
-			include pug/main/1-main
-			include pug/main/2-video
+			include pug/course/1-main
 			include pug/main/3-advantages
 			include pug/main/4-for
-			include pug/main/5-plan
-			include pug/main/6-usefull
-			//- include pug/main/7-modules
+			include pug/course/2-modules
+			include pug/course/3-plan
+			include pug/course/4-prices
 			include pug/main/8-author
 			//include pug/main/9-revs
 			include pug/main/10-last
-		include pug/main/11-modal
-		+b('button-mobile', '#form-main', 'Записаться')
+		+b('button-mobile', '#prices', 'Записаться')
 		include pug/base/2-footer
 		include pug/base/3-scripts
 		include pug/scripts/body_bottom_scripts

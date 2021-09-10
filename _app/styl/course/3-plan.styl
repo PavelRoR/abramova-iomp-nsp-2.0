@@ -1,0 +1,52 @@
+#plan
+	padding 100px 0 380px
+	@media screen and (max-width 991px)
+		padding 100px 0
+	.container
+		position relative
+.plan-img
+	position absolute
+	bottom -290px
+	right 0
+	display block
+	width 100%
+	max-width 503px
+	@media screen and (max-width 991px)
+		position: static
+		margin 40px auto 0
+.modules
+	position relative
+	z-index 30
+.modules-buttons
+	margin-bottom: 50px
+	li
+		display inline-block
+		&:nth-child(2)
+			margin 0 75px
+		a
+			font-family: L
+			font-size: 48px
+			color #2B514D
+			transition: all .3s ease
+		&.active
+		&:hover
+			a
+				text-decoration underline
+.tab-content > .tab-pane
+	display: none;
+.tab-content > .active
+	display: block;
+.intro-lessons
+	padding-bottom: 30px
+	margin-bottom: 30px
+	border-bottom: 1px solid #C4C4C4
+.intro-lesson
+	&-title
+		color #2B514D
+		font-family: SUD
+		font-size: 30px
+		font-weight: 500
+		margin-bottom: 15px
+.module-doc
+	font-size: 38px
+	color #5A9891;

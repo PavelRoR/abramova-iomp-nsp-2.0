@@ -61,83 +61,85 @@ $(document).ready(function () {
     $('[data-fancybox]').fancybox({
         loop: 0,
     });
-    $('.revs-slider').slick({
-        autoplay: false,
-        autoplaySpeed: 3000,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        infinite: false,
-        dots: false,
-        speed: 300,
-        arrows: true,
-        // centerPadding: '40px',
-        // adaptiveHeight: true,
-        // centerMode: true,
-        appendArrows: '.video-revs-arrows-1',
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2
-            },
-            breakpoint: 561,
-            settings: {
-                slidesToShow: 1
-            }
-        }]
-    });
-    $('.revs-slider-text').slick({
-        autoplay: false,
-        autoplaySpeed: 3000,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        infinite: false,
-        dots: false,
-        speed: 300,
-        arrows: true,
-        // centerPadding: '40px',
-        // adaptiveHeight: true,
-        // centerMode: true,
-        appendArrows: '.video-revs-arrows-2',
-        responsive: [{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2
-            },
-            breakpoint: 561,
-            settings: {
-                slidesToShow: 1
-            }
-        }]
-    });
-    /* Видео */
-    $(".video-wrapper-revs").click(function () {
-        $(".video-wrapper-revs iframe").each(function () {
-            var l = $(this).parent().attr('data-img');
-            $(this).parent().html('<img src="' + l + '" alt="Видео отзыв">');
-        })
-        var a = $(this).attr("data-youtube");
-        $(this).html('<iframe src="https://www.youtube.com/embed/' + a + '?showinfo=0&rel=0&autoplay=1&mute=1&modestbranding=1"  allowfullscreen></iframe>')
-    });
+    // $('.revs-slider').slick({
+    //     autoplay: false,
+    //     autoplaySpeed: 3000,
+    //     slidesToShow: 4,
+    //     slidesToScroll: 1,
+    //     infinite: false,
+    //     dots: false,
+    //     speed: 300,
+    //     arrows: true,
+    //     // centerPadding: '40px',
+    //     // adaptiveHeight: true,
+    //     // centerMode: true,
+    //     appendArrows: '.video-revs-arrows-1-dt',
+    //     responsive: [{
+    //         breakpoint: 768,
+    //         settings: {
+    //             slidesToShow: 2
+    //         },
+    //         breakpoint: 561,
+    //         settings: {
+    //             slidesToShow: 1,
+    //             appendArrows: '.video-revs-arrows-1-mob',
+    //         }
+    //     }]
+    // });
+    // $('.revs-slider-text').slick({
+    //     autoplay: false,
+    //     autoplaySpeed: 3000,
+    //     slidesToShow: 4,
+    //     slidesToScroll: 1,
+    //     infinite: false,
+    //     dots: false,
+    //     speed: 300,
+    //     arrows: true,
+    //     // centerPadding: '40px',
+    //     // adaptiveHeight: true,
+    //     // centerMode: true,
+    //     appendArrows: '.video-revs-arrows-2-dt',
+    //     responsive: [{
+    //         breakpoint: 768,
+    //         settings: {
+    //             slidesToShow: 2
+    //         },
+    //         breakpoint: 561,
+    //         settings: {
+    //             slidesToShow: 1,
+    //             appendArrows: '.video-revs-arrows-2-mob',
+    //         }
+    //     }]
+    // });
+    // /* Видео */
+    // $(".video-wrapper-revs").click(function () {
+    //     $(".video-wrapper-revs iframe").each(function () {
+    //         var l = $(this).parent().attr('data-img');
+    //         $(this).parent().html('<img src="' + l + '" alt="Видео отзыв">');
+    //     })
+    //     var a = $(this).attr("data-youtube");
+    //     $(this).html('<iframe src="https://www.youtube.com/embed/' + a + '?showinfo=0&rel=0&autoplay=1&mute=1&modestbranding=1"  allowfullscreen></iframe>')
+    // });
 
-    function imToVideo() {
-        $('.video-wrapper-revs iframe').each(function () {
-            var l = $(this).parent().attr('data-img');
-            $(this).parent().html('<img src="' + l + '" alt="Видео отзыв">');
-        });
-        $(".video-wrapper-revs img").click(function () {
-            var a = $(this).parent().attr("data-youtube");
-            $(this).parent().html('<iframe src="https://www.youtube.com/embed/' + a + '?modestbrandig=1&mute=1&showinfo=0&rel=0&autoplay=1" allowfullscreen></iframe>');
-        });
-    }
-    $('.revs-slider').on('swipe', function (event, slick, direction) {
-        imToVideo();
-    });
-    $('.revs-slider').on('afterChange', function (event, slick, direction) {
-        imToVideo();
-    });
-    $('.revs-slider').on('beforeChange', function (event, slick, direction) {
-        imToVideo();
-    });
+    // function imToVideo() {
+    //     $('.video-wrapper-revs iframe').each(function () {
+    //         var l = $(this).parent().attr('data-img');
+    //         $(this).parent().html('<img src="' + l + '" alt="Видео отзыв">');
+    //     });
+    //     $(".video-wrapper-revs img").click(function () {
+    //         var a = $(this).parent().attr("data-youtube");
+    //         $(this).parent().html('<iframe src="https://www.youtube.com/embed/' + a + '?modestbrandig=1&mute=1&showinfo=0&rel=0&autoplay=1" allowfullscreen></iframe>');
+    //     });
+    // }
+    // $('.revs-slider').on('swipe', function (event, slick, direction) {
+    //     imToVideo();
+    // });
+    // $('.revs-slider').on('afterChange', function (event, slick, direction) {
+    //     imToVideo();
+    // });
+    // $('.revs-slider').on('beforeChange', function (event, slick, direction) {
+    //     imToVideo();
+    // });
 
     $('.mobile-menu').on('click', function () {
         if (!$('.header-nav').hasClass('nav-active')) {

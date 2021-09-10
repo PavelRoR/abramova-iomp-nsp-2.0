@@ -1,12 +1,15 @@
 #video
-	padding 150px 0
+	padding 150px 0 250px
+	@media screen and (max-width 1199px)
+		padding 90px 0 220px
 	@media screen and (max-width 991px)
-		padding 90px 0
+		padding 90px 0 220px
 	@media screen and (max-width 560px)
-		padding 60px 0 50px
+		padding 60px 0 250px
 .circle
 	position absolute
 	border-radius: 50%
+	z-index -1
 	&-bordered
 		border 1px solid #D6D6D6;
 	&-pink
@@ -14,39 +17,47 @@
 	&-1
 		width: 304px;
 		height: 304px;
-		top: 170px;
-		left: -66px;
+		top: 220px;
+		right: -66px;
 		@media screen and (max-width 991px)
 			top auto
 			bottom -181px
+		@media screen and (max-width 560px)
+			bottom -230px
+			width 220px
+			height: 220px
 	&-2
 		width: 129px;
 		height: 129px;
 		top: 400px;
-		left: 282px;
+		right: 282px;
 		@media screen and (max-width 991px)
 			top auto
 			bottom -200px
-			left 380px
+			right 380px
 		@media screen and (max-width 560px)
-			left 280px
+			width 100px
+			height: 100px
+			right 220px
+		@media screen and (max-width 385px)
+			right 180px
 	&-3
 		width: 32px;
 		height: 32px;
-		top: 400px;
-		left: 195px;
+		top: 450px;
+		right: 195px;
 		@media screen and (max-width 991px)
 			top auto
-			bottom -100px
-			left: 215px
+			bottom -130px
+			right: 140px
 	&-4
 		width: 42px;
 		height: 42px;
-		top: 450px;
-		left: 86px;
+		top: 500px;
+		right: 86px;
 		@media screen and (max-width 991px)
 			top auto
-			bottom -200px
+			bottom -230px
 .button-video
 	margin-top: 20px
 	@media screen and (max-width 560px)
