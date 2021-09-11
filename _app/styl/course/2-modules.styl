@@ -1,32 +1,59 @@
 #skills
 	padding 100px 0
+	@media screen and (max-width 1199px)
+		padding 100px 0 50px
+	@media screen and (max-width 991px)
+		padding 90px 0
+	@media screen and (max-width 560px)
+		padding 60px 0
 .skills-item
 	position relative
 	&-2
 		margin: 150px 0 80px
+		@media screen and (max-width 1230px)
+			margin-top: 80px
+		@media screen and (max-width 560px)
+			margin 50px 0
 	&-title
 		font-family: L
 		font-size: 38px
 		font-weight: normal
 		margin-bottom: 30px
+		@media screen and (max-width 560px)
+			font-size: 28px
+			margin-bottom: 20px
 	&-block
 		position relative
 		display inline-block
-		padding 12px 14px
+		padding 12px
 		border: 2px solid #5A9891;
 		border-radius: 5px;
-		margin-right: 10px
+		margin-right: 9px
 		&:last-of-type
-			margin-right: 0
+			margin-right: -1px
+			@media screen and (max-width 991px)
+				margin-right: 0
 		&-sert
 			background-color: #48817B;
 			border:  2px solid #5A9891;
 			color #FEE7E6
+		@media screen and (max-width 991px)
+			margin-right: 0
 .arrow
 	position relative
 	border-top: 2px solid #5A9891;
-	margin-right: 10px
+	margin-right: 9px
 	display inline-block
+	@media screen and (max-width 991px)
+		display block
+		margin 20px 0 20px 60px
+		height: 100px
+		width 2px
+		border-top: 0
+		background-color: #5A9891;
+		top 0
+	@media screen and (max-width 560px)
+		margin 20px 0 20px 45px
 	&:after
 		content: ''
 		display block
@@ -38,35 +65,67 @@
 		transform rotate(45deg)
 		top -6.5px
 		right: 0
+		@media screen and (max-width 991px)
+			top auto
+			bottom 0
+			transform: rotate(135deg)
+			left -4px
+			right auto
+			width 10px
+			height: 10px
 .skills-item-1-block-1
 	width 296px
+	@media screen and (max-width 991px)
+		width auto
 .arrow-item-1-1
 .arrow-item-1-2
 	width 105px
 	top -30px
+	@media screen and (max-width 991px)
+		width 2px
+		top auto
 .skills-item-1-block-2
 .skills-item-1-block-3
 .skills-item-3-block-2
 .skills-item-3-block-3
 .skills-item-2-block-4
 	top: -26px
+	@media screen and (max-width 991px)
+		top 0
 .skills-items-img
 	position absolute
 	top -50px
 	right -15px
+	@media screen and (max-width 1199px)
+		position: static
+		display block
+		margin 50px auto 0
+		width auto
 .arrow-item-2-1
 	width 40px
 	top -5px
+	@media screen and (max-width 991px)
+		width 2px
+		top 0
 .arrow-item-2-2
 	display none
+	@media screen and (max-width 991px)
+		display block
 .arrow-item-2-3
 .arrow-item-2-4
 	width 123px
 	top -30px
+	@media screen and (max-width 1199px)
+		width 75px
+	@media screen and (max-width 991px)
+		width 2px
+		top 0
 .big-arrow
 	position relative
 	width 860px
 	margin 0 auto
+	@media screen and (max-width 991px)
+		display none
 	&-1
 	&-2
 		position absolute
@@ -79,6 +138,10 @@
 		border-radius: 0 25px 25px 0
 		top -29px
 		right 179px
+		@media screen and (max-width 1230px)
+			right 155px
+		@media screen and (max-width 1199px)
+			right 55px
 	&:before
 	&:after
 		content: ''
@@ -89,6 +152,8 @@
 		width 560px
 		top 49px
 		left 50px
+		@media screen and (max-width 1199px)
+			width 660px
 	&:after
 		width 100px
 		height: 80px
@@ -103,6 +168,8 @@
 		border-top: 2px solid #5A9891;
 		left 50px
 		top 127px
+		@media screen and (max-width 1230px)
+			left 25px
 		&:before
 			content: ''
 			display block
@@ -118,11 +185,31 @@
 	width 230px
 	margin-top: 100px
 	margin-left: 300px
+	@media screen and (max-width 1230px)
+		margin-left: 250px
+	@media screen and (max-width 1199px)
+		margin-left: 145px
+	@media screen and (max-width 991px)
+		margin 0
+		width auto
 .skills-item-2-block-5
 	width 230px
+	@media screen and (max-width 991px)
+		width auto
 .skills-item-3-block-1
 	width 580px
+	@media screen and (max-width 1230px)
+		width 534px
+		top: 26px
+	@media screen and (max-width 1199px)
+		width 334px
+	@media screen and (max-width 991px)
+		top 0
+		width auto
 .arrow-item-3-1
 .arrow-item-3-2
 	width 62px
 	top: -30px
+	@media screen and (max-width 991px)
+		width 2px
+		top 0

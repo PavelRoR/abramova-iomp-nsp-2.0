@@ -1,12 +1,14 @@
 #plan
-	padding 100px 0 380px
+	padding 100px 0 250px
 	@media screen and (max-width 991px)
-		padding 100px 0
+		padding 90px 0
+	@media screen and (max-width 560px)
+		padding 60px 0
 	.container
 		position relative
 .plan-img
 	position absolute
-	bottom -290px
+	bottom -120px
 	right 0
 	display block
 	width 100%
@@ -19,15 +21,30 @@
 	z-index 30
 .modules-buttons
 	margin-bottom: 50px
+	@media screen and (max-width 560px)
+		margin-bottom: 40px
 	li
 		display inline-block
+		@media screen and (max-width 560px)
+			display block
+			margin 0 0 20px
 		&:nth-child(2)
 			margin 0 75px
+			@media screen and (max-width 991px)
+				margin 0 30px
+			@media screen and (max-width 767px)
+				margin 0 20px
+			@media screen and (max-width 560px)
+				margin 0 0 20px
 		a
 			font-family: L
 			font-size: 48px
 			color #2B514D
 			transition: all .3s ease
+			@media screen and (max-width 991px)
+				font-size: 40px
+			@media screen and (max-width 767px)
+				font-size: 30px
 		&.active
 		&:hover
 			a
@@ -40,6 +57,8 @@
 	padding-bottom: 30px
 	margin-bottom: 30px
 	border-bottom: 1px solid #C4C4C4
+	@media screen and (max-width 991px)
+		padding-bottom: 10px
 .intro-lesson
 	&-title
 		color #2B514D
@@ -47,6 +66,12 @@
 		font-size: 30px
 		font-weight: 500
 		margin-bottom: 15px
+	@media screen and (max-width 991px)
+		margin-bottom: 20px
 .module-doc
 	font-size: 38px
+	font-weight: 300
 	color #5A9891;
+	@media screen and (max-width 560px)
+		font-size: 32px
+		margin-top: 20px
